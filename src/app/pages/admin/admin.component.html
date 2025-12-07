@@ -1,0 +1,163 @@
+
+<mat-toolbar class="fixed top-0 left-0 right-0 z-50 shadow-md"
+             style="background-color: rgb(51, 152, 51); padding: 10px;">
+  <span class="text-white font-semibold ml-2">Ndandeh</span>
+  <button mat-icon-button class="ml-2" (click)="sidenav.toggle()">
+    <mat-icon class="text-white">menu</mat-icon>
+  </button>
+  <span class="flex-1"></span>
+  <span class="text-sm text-white font-bold mr-2">Djouma</span>
+  <button mat-icon-button>
+    <mat-icon class="text-white">person</mat-icon>
+  </button>
+</mat-toolbar>
+
+<!-- HEADER -->
+<div class="p-4 mt-16 flex items-center">
+  <h5 class="text-sm font-semibold text-green-600">Tableau de bord</h5>
+  <span class="flex-1"></span>
+  <span class="px-2 py-1 rounded bg-red-500 text-white text-xs">
+    admin
+  </span>
+</div>
+
+<hr />
+
+<mat-sidenav-container class="h-[calc(100vh-90px)]">
+
+  <!-- SIDENAV RESPONSIVE -->
+  <mat-sidenav #sidenav 
+               [mode]="screenWidth < 768 ? 'over' : 'side'"
+               [opened]="screenWidth >= 768"
+               class="bg-white shadow-md w-64">
+
+    <mat-nav-list>
+      <!-- Item simple avec icône -->
+      <a mat-list-item href="" class="hover:bg-gray-100 rounded">
+        <mat-icon class="mr-3">person</mat-icon>
+        Utilisateur
+      </a>
+
+      <!-- Item accordéon avec sous-menus -->
+      <mat-accordion multi>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="mr-3">medication</mat-icon>
+              Médicament
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <mat-nav-list>
+            <a mat-list-item href="" class="hover:bg-gray-100 rounded">
+              Ajouter Médicament
+            </a>
+            <a mat-list-item href="" class="hover:bg-gray-100 rounded">
+              Liste Médicaments
+            </a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="mr-3">category</mat-icon>
+              Catégorie
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <mat-nav-list>
+            <a mat-list-item href="" class="hover:bg-gray-100 rounded">
+              Ajouter Catégorie
+            </a>
+            <a mat-list-item href="" class="hover:bg-gray-100 rounded">
+              Liste Catégories
+            </a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </mat-accordion>
+
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <!-- MAIN CONTENT -->
+  <mat-sidenav-content class="p-4 sm:p-6 overflow-y-auto">
+
+    <!-- ==== CARDS ==== -->
+    <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 xl:grid-cols-4">
+
+      <mat-card class="shadow-md">
+        <mat-card-title class="p-4 text-lg font-semibold">Card 1</mat-card-title>
+        <mat-card-content class="px-5 pb-4 text-gray-700">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </mat-card-content>
+        <mat-card-footer class="p-4">
+          <button mat-flat-button class="w-full text-white" style="background-color: green;">
+            un bouton
+          </button>
+        </mat-card-footer>
+      </mat-card>
+
+      <mat-card class="shadow-md">
+        <mat-card-title class="p-4 text-lg font-semibold">Card 2</mat-card-title>
+        <mat-card-content class="px-5 pb-4 text-gray-700">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </mat-card-content>
+        <mat-card-footer class="p-4">
+          <button mat-flat-button class="w-full text-white" style="background-color: green;">
+            un bouton
+          </button>
+        </mat-card-footer>
+      </mat-card>
+
+    </div>
+
+    <!-- ==== FORMULAIRE ==== -->
+    <div class="w-full mt-10 mb-10 p-6 bg-white shadow-lg rounded">
+      <form class="flex flex-col gap-5">
+
+        <h3 class="text-lg font-semibold">Ajouter un médicament</h3>
+        <hr />
+
+        <mat-form-field appearance="fill" class="w-full">
+          <mat-label>Désignation</mat-label>
+          <input matInput placeholder="Désignation">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="w-full">
+          <mat-label>Catégorie</mat-label>
+          <mat-select>
+            <mat-option>Paludisme</mat-option>
+            <mat-option>Option 2</mat-option>
+            <mat-option>Option 3</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="w-full">
+          <mat-label>Prix</mat-label>
+          <input matInput type="number" placeholder="Prix">
+        </mat-form-field>
+
+        <button mat-raised-button  style="background-color: green;">
+          <span class="text-white">
+            envoyer
+          </span>
+        </button>
+
+      </form>
+    </div>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
+
+<!-- ===== BOUTON CHAT FIXE ===== -->
+<div style="position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9999;">
+  <button mat-fab
+          (click)="ouvrirChat()"
+          class="text-white shadow-2xl"
+          style="background-color: green;">
+    <mat-icon>chat</mat-icon>
+  </button>
+</div>

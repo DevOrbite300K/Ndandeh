@@ -1,0 +1,47 @@
+<div class="w-full h-screen flex flex-col bg-gray-100">
+
+  <!-- HEADER -->
+  <mat-card class="shadow-md">
+    <mat-card-title class="bg-green-600 p-4 rounded-t-lg">
+      <h4 class="text-white text-lg font-semibold">
+        Assistant virtuel
+      </h4>
+    </mat-card-title>
+  </mat-card>
+
+  <!-- CHAT BOX -->
+  <div class="flex-1 p-4 overflow-y-auto">
+
+    <!-- Message assistant -->
+    <div class="w-full flex justify-start mb-3">
+      <div class="bg-green-500 text-white px-4 py-2 rounded-lg max-w-[75%] shadow">
+        Message 1
+      </div>
+    </div>
+
+    <!-- Message utilisateur -->
+    <div class="w-full flex justify-end mb-3">
+      <div class="bg-gray-300 text-gray-900 px-4 py-2 rounded-lg max-w-[75%] shadow">
+        Message utilisateur
+      </div>
+    </div>
+
+  </div>
+
+  <!-- INPUT AREA -->
+  <div class="w-full p-3 bg-white shadow-md">
+    <div class="flex items-center gap-3">
+
+      <mat-form-field class="flex-1" appearance="fill">
+        <mat-label>Message</mat-label>
+        <input matInput placeholder="Écrire un message...">
+      </mat-form-field>
+
+      <button mat-fab color="primary">
+        <mat-icon>send</mat-icon>
+      </button>
+
+    </div>
+  </div>
+
+</div>
