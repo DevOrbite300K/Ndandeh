@@ -1,0 +1,90 @@
+<!-- Navigation améliorée -->
+<div class="w-full py-3 fixed top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
+
+  <!-- bouton chat flottant en bas et fixe a droite -->
+  
+  <mat-toolbar class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 !bg-transparent !min-h-[60px]">
+    
+    <!-- Logo -->
+    <a  routerLink="" class="text-green-600 font-bold text-xl sm:text-2xl flex items-center">
+      <mat-icon class="mr-2 text-green-600 hidden sm:inline">health_and_safety</mat-icon>
+      Ndandeh
+    </a>
+    
+    <!-- Espace central -->
+    <span class="flex-1"></span>
+    
+    
+    
+    <!-- Boutons CTA -->
+    <div class="flex items-center gap-2">
+      <a routerLink="/auth" 
+         mat-button 
+         class=" !text-green-600  bg-slate-50 hover:!shadow-md  duration-200 !rounded-lg !px-4 !py-1">
+        <span class="hidden sm:inline">Se connecter</span>
+        <mat-icon class="sm:hidden !text-lg">login</mat-icon>
+      </a>
+      
+      <a routerLink="/register" 
+         mat-button 
+         class="!bg-slate-50 !text-green-600 hover:!bg-slate-50 hover:!shadow-md transition-shadow duration-200 !rounded-lg !px-4 !py-1">
+        <span class="hidden sm:inline">S'inscrire</span>
+        <mat-icon class="sm:hidden !text-lg">person_add</mat-icon>
+      </a>
+    </div>
+    
+  </mat-toolbar>
+</div>
+
+<router-outlet></router-outlet>
+
+<!-- Footer amélioré -->
+<div class="fixed bottom-0 left-0 right-0  bg-white/95 backdrop-blur-sm border-t border-gray-200 shadow-sm">
+
+
+  <div class="fixed bottom-10 right-4 z-50">
+    <button (click)="ouvrirChat()" class="flex items-center justify-center w-12 h-12 bg-green-600 text-white rounded-full shadow-lg hover:bg-green-700 transition-colors duration-200">
+      <mat-icon>chat</mat-icon>
+    </button>
+  </div>
+
+  <mat-toolbar class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 !bg-transparent !min-h-[60px]">
+    <div class="w-full flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-center">
+      
+      <!-- Copyright -->
+      <span class="text-gray-600 text-xs sm:text-sm">
+        © 2024 Ndandeh. Tous droits réservés.
+      </span>
+      
+      <!-- Séparateur -->
+      <span class="hidden sm:inline text-gray-300">|</span>
+      
+      <!-- Liens de navigation -->
+      <nav class="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+        <a routerLink="savoirplus/" 
+           class="text-green-600 hover:text-green-700 hover:underline text-xs sm:text-sm transition-colors duration-200">
+          Savoir plus
+        </a>
+        <span class="text-gray-300">•</span>
+        
+        <a routerLink="contact/" 
+           class="text-green-600 hover:text-green-700 hover:underline text-xs sm:text-sm transition-colors duration-200">
+          Contact
+        </a>
+        <span class="text-gray-300">•</span>
+        
+        <a routerLink="fonctionnalite/" 
+           class="text-green-600 hover:text-green-700 hover:underline text-xs sm:text-sm transition-colors duration-200">
+          Fonctionnalités
+        </a>
+        <span class="text-gray-300">•</span>
+        
+        <a href="#" 
+           class="text-gray-500 hover:text-green-600 hover:underline text-xs sm:text-sm transition-colors duration-200">
+          Confidentialité
+        </a>
+      </nav>
+      
+    </div>
+  </mat-toolbar>
+</div>>

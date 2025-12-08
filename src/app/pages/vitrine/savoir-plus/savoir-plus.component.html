@@ -1,0 +1,418 @@
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+
+  <!-- Titre principal -->
+  <div class="text-center mb-12 lg:mb-16 mt-16">
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+      La solution <span class="text-green-600">Ndandeh</span> en détail
+    </h1>
+    <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+      Découvrez comment nous révolutionnons l'accès aux soins de santé en Afrique
+    </p>
+    <div class="w-20 h-1 bg-gradient-to-r from-green-500 to-green-400 mx-auto mt-6 rounded-full"></div>
+  </div>
+
+  <!-- SECTION : PROBLÈME -->
+  <div class="mb-10">
+    <mat-expansion-panel class="shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-2xl overflow-hidden">
+      <mat-expansion-panel-header class="hover:bg-gray-50 transition-colors duration-300">
+        <mat-panel-title class="flex items-center gap-3">
+          <div class="p-2 bg-red-100 rounded-lg">
+            <mat-icon class="text-red-600">error</mat-icon>
+          </div>
+          <span class="text-xl font-bold text-gray-900">Le Problème</span>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <div class="p-6 bg-gradient-to-br from-red-50 to-white">
+        <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+          Les systèmes de santé en Afrique font face à des défis majeurs qui limitent l'accès à des soins de qualité.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="bg-white p-5 rounded-xl border border-red-100 hover:border-red-300 transition-colors duration-300">
+            <div class="flex items-start gap-3">
+              <mat-icon class="text-red-500 mt-1">info</mat-icon>
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">Accès limité à l'information</h4>
+                <p class="text-gray-600 text-sm">Manque de ressources médicales fiables et accessibles</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-white p-5 rounded-xl border border-red-100 hover:border-red-300 transition-colors duration-300">
+            <div class="flex items-start gap-3">
+              <mat-icon class="text-red-500 mt-1">warning</mat-icon>
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">Automédication excessive</h4>
+                <p class="text-gray-600 text-sm">Risques accrus d'effets secondaires et complications</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-white p-5 rounded-xl border border-red-100 hover:border-red-300 transition-colors duration-300">
+            <div class="flex items-start gap-3">
+              <mat-icon class="text-red-500 mt-1">schedule</mat-icon>
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">Médecins surchargés</h4>
+                <p class="text-gray-600 text-sm">Temps d'attente prolongés et consultations limitées</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-expansion-panel>
+  </div>
+
+  <!-- SECTION : SOLUTION -->
+  <div class="mb-10">
+    <mat-expansion-panel class="shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-2xl overflow-hidden" [expanded]="true">
+      <mat-expansion-panel-header class="hover:bg-gray-50 transition-colors duration-300">
+        <mat-panel-title class="flex items-center gap-3">
+          <div class="p-2 bg-green-100 rounded-lg">
+            <mat-icon class="text-green-600">lightbulb</mat-icon>
+          </div>
+          <span class="text-xl font-bold text-gray-900">Notre Solution</span>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <div class="p-6 bg-gradient-to-br from-green-50 to-white">
+        <p class="text-2xl font-bold text-green-700 mb-6">
+          Une plateforme d'assistance médicale intelligente, disponible 24h/24 et 7j/7
+        </p>
+        
+        <div class="mb-8">
+          <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
+            <mat-icon class="text-green-600">check_circle</mat-icon>
+            Ce que Ndandeh propose :
+          </h3>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-center gap-3 p-3 bg-white rounded-lg border border-green-100 hover:border-green-300 transition-colors duration-300">
+              <mat-icon class="text-green-600">search</mat-icon>
+              <span class="text-gray-700">Analyse IA des symptômes</span>
+            </div>
+            
+            <div class="flex items-center gap-3 p-3 bg-white rounded-lg border border-green-100 hover:border-green-300 transition-colors duration-300">
+              <mat-icon class="text-green-600">document_scanner</mat-icon>
+              <span class="text-gray-700">Scan d'ordonnances intelligent</span>
+            </div>
+            
+            <div class="flex items-center gap-3 p-3 bg-white rounded-lg border border-green-100 hover:border-green-300 transition-colors duration-300">
+              <mat-icon class="text-green-600">notifications_active</mat-icon>
+              <span class="text-gray-700">Rappels de traitement personnalisés</span>
+            </div>
+            
+            <div class="flex items-center gap-3 p-3 bg-white rounded-lg border border-green-100 hover:border-green-300 transition-colors duration-300">
+              <mat-icon class="text-green-600">monitor_heart</mat-icon>
+              <span class="text-gray-700">Suivi des maladies chroniques</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-xl p-6 border border-green-200 shadow-sm">
+          <h4 class="font-bold text-gray-900 mb-3 flex items-center gap-2">
+            <mat-icon class="text-green-600">bolt</mat-icon>
+            Avantages clés
+          </h4>
+          <ul class="space-y-2">
+            <li class="flex items-center gap-2 text-gray-700">
+              <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+              Interface multilingue et intuitive
+            </li>
+            <li class="flex items-center gap-2 text-gray-700">
+              <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+              Accessible hors connexion
+            </li>
+            <li class="flex items-center gap-2 text-gray-700">
+              <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+              Recommandations basées sur l'IA
+            </li>
+          </ul>
+        </div>
+      </div>
+    </mat-expansion-panel>
+  </div>
+
+  <!-- SECTION : COMMENT ÇA MARCHE -->
+  <div class="mb-10">
+    <mat-expansion-panel class="shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-2xl overflow-hidden">
+      <mat-expansion-panel-header class="hover:bg-gray-50 transition-colors duration-300">
+        <mat-panel-title class="flex items-center gap-3">
+          <div class="p-2 bg-blue-100 rounded-lg">
+            <mat-icon class="text-blue-600">psychology</mat-icon>
+          </div>
+          <span class="text-xl font-bold text-gray-900">Comment ça marche</span>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <div class="p-6 bg-gradient-to-br from-blue-50 to-white">
+        <div class="relative">
+          <!-- Timeline -->
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                1
+              </div>
+              <div class="bg-white p-4 rounded-xl border border-blue-100 flex-1">
+                <h4 class="font-semibold text-gray-900 mb-2">Décrivez vos symptômes</h4>
+                <p class="text-gray-600">Partagez ce que vous ressentez en langage naturel</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                2
+              </div>
+              <div class="bg-white p-4 rounded-xl border border-blue-100 flex-1">
+                <h4 class="font-semibold text-gray-900 mb-2">Analyse IA intelligente</h4>
+                <p class="text-gray-600">Notre IA évalue et propose des conseils informatifs</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                3
+              </div>
+              <div class="bg-white p-4 rounded-xl border border-blue-100 flex-1">
+                <h4 class="font-semibold text-gray-900 mb-2">Recommandations personnalisées</h4>
+                <p class="text-gray-600">Recevez des conseils adaptés à votre situation</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                4
+              </div>
+              <div class="bg-white p-4 rounded-xl border border-blue-100 flex-1">
+                <h4 class="font-semibold text-gray-900 mb-2">Suivi continu</h4>
+                <p class="text-gray-600">Restez informé avec des rappels et un suivi adapté</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-expansion-panel>
+  </div>
+
+  <!-- SECTION : IMPACT -->
+  <div class="mb-10">
+    <mat-expansion-panel class="shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-2xl overflow-hidden">
+      <mat-expansion-panel-header class="hover:bg-gray-50 transition-colors duration-300">
+        <mat-panel-title class="flex items-center gap-3">
+          <div class="p-2 bg-purple-100 rounded-lg">
+            <mat-icon class="text-purple-600">public</mat-icon>
+          </div>
+          <span class="text-xl font-bold text-gray-900">Impact Social</span>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <div class="p-6 bg-gradient-to-br from-purple-50 to-white">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-xl border border-purple-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+            <mat-icon class="text-4xl text-purple-600 mb-4">health_and_safety</mat-icon>
+            <h4 class="font-bold text-gray-900 mb-3">Réduction de l'automédication</h4>
+            <p class="text-gray-600 text-sm">Orientation vers des solutions adaptées et sécurisées</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl border border-purple-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+            <mat-icon class="text-4xl text-purple-600 mb-4">accessibility_new</mat-icon>
+            <h4 class="font-bold text-gray-900 mb-3">Accessibilité améliorée</h4>
+            <p class="text-gray-600 text-sm">Pour tous, y compris hors des zones urbaines</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl border border-purple-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+            <mat-icon class="text-4xl text-purple-600 mb-4">school</mat-icon>
+            <h4 class="font-bold text-gray-900 mb-3">Éducation sanitaire</h4>
+            <p class="text-gray-600 text-sm">Sensibilisation et prévention renforcées</p>
+          </div>
+        </div>
+      </div>
+    </mat-expansion-panel>
+  </div>
+
+  <!-- SECTION : DÉMOS INTERACTIVES -->
+  <div class="mb-10">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">Démonstrations interactives</h2>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      
+      <!-- Analyse des symptômes -->
+      <mat-expansion-panel class="shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-2xl overflow-hidden">
+        <mat-expansion-panel-header class="hover:bg-gray-50 transition-colors duration-300">
+          <mat-panel-title class="flex items-center gap-3">
+            <mat-icon class="text-green-600">healing</mat-icon>
+            <span class="font-bold text-gray-900">Analyse des Symptômes</span>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        
+        <div class="p-6">
+          <div class="bg-gray-50 rounded-xl p-4 mb-4">
+            <p class="text-gray-700 italic">"J'ai mal à la tête depuis hier, je suis fatiguée et j'ai de la fièvre."</p>
+          </div>
+          
+          <button mat-raised-button color="primary" class="w-full py-3 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
+            <mat-icon class="mr-2">play_arrow</mat-icon>
+            Démarrer l'analyse IA
+          </button>
+        </div>
+      </mat-expansion-panel>
+      
+      <!-- Scan d'ordonnance -->
+      <mat-expansion-panel class="shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-2xl overflow-hidden">
+        <mat-expansion-panel-header class="hover:bg-gray-50 transition-colors duration-300">
+          <mat-panel-title class="flex items-center gap-3">
+            <mat-icon class="text-blue-600">document_scanner</mat-icon>
+            <span class="font-bold text-gray-900">Scan d'Ordonnance</span>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        
+        <div class="p-6">
+          <div class="space-y-3 mb-6">
+            <div class="flex items-center gap-3">
+              <mat-icon class="text-green-600">check_circle</mat-icon>
+              <span class="text-gray-700">Extraction automatique des médicaments</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <mat-icon class="text-green-600">check_circle</mat-icon>
+              <span class="text-gray-700">Dosages et fréquences</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <mat-icon class="text-green-600">check_circle</mat-icon>
+              <span class="text-gray-700">Précautions et interactions</span>
+            </div>
+          </div>
+          
+          <button mat-raised-button color="primary" class="w-full py-3 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
+            <mat-icon class="mr-2">cloud_upload</mat-icon>
+            Scanner une ordonnance
+          </button>
+        </div>
+      </mat-expansion-panel>
+      
+    </div>
+  </div>
+
+  <!-- SCÉNARIOS IA -->
+  <div>
+    <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">Scénarios d'analyse IA</h2>
+    
+    <div class="space-y-6">
+      
+      <!-- Scénario 1 -->
+      <mat-expansion-panel class="shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-2xl overflow-hidden">
+        <mat-expansion-panel-header class="hover:bg-gray-50 transition-colors duration-300">
+          <mat-panel-title class="flex items-center gap-3">
+            <mat-icon class="text-green-600">check_circle</mat-icon>
+            <span class="font-bold text-gray-900">Cas léger : Mal de tête + Fièvre</span>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        
+        <div class="p-6 bg-gradient-to-br from-green-50 to-white">
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white p-5 rounded-xl border border-green-100">
+              <h4 class="font-bold text-green-700 mb-3 flex items-center gap-2">
+                <mat-icon>analytics</mat-icon>
+                Analyse IA
+              </h4>
+              <p class="text-gray-700">Probabilité élevée d'infection virale bénigne</p>
+            </div>
+            
+            <div class="bg-white p-5 rounded-xl border border-green-100">
+              <h4 class="font-bold text-green-700 mb-3 flex items-center gap-2">
+                <mat-icon>recommend</mat-icon>
+                Conseils
+              </h4>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-center gap-2">
+                  <mat-icon class="text-green-600 text-sm">check</mat-icon>
+                  Hydratation régulière
+                </li>
+                <li class="flex items-center gap-2">
+                  <mat-icon class="text-green-600 text-sm">check</mat-icon>
+                  Repos adapté
+                </li>
+                <li class="flex items-center gap-2">
+                  <mat-icon class="text-green-600 text-sm">check</mat-icon>
+                  Antalgique si nécessaire
+                </li>
+              </ul>
+            </div>
+            
+            <div class="bg-white p-5 rounded-xl border border-green-100">
+              <h4 class="font-bold text-orange-600 mb-3 flex items-center gap-2">
+                <mat-icon>warning</mat-icon>
+                Quand consulter
+              </h4>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-center gap-2">
+                  <mat-icon class="text-orange-600 text-sm">schedule</mat-icon>
+                  Fièvre > 48h
+                </li>
+                <li class="flex items-center gap-2">
+                  <mat-icon class="text-orange-600 text-sm">schedule</mat-icon>
+                  Signes neurologiques
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="mt-6 bg-white/80 p-4 rounded-xl border border-gray-200">
+            <p class="text-sm text-gray-600 italic flex items-center gap-2">
+              <mat-icon class="text-gray-500 text-sm">info</mat-icon>
+              Cette analyse est informative et ne remplace pas une consultation médicale.
+            </p>
+          </div>
+        </div>
+      </mat-expansion-panel>
+      
+      <!-- Scénario 2 -->
+      <mat-expansion-panel class="shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-2xl overflow-hidden">
+        <mat-expansion-panel-header class="hover:bg-gray-50 transition-colors duration-300">
+          <mat-panel-title class="flex items-center gap-3">
+            <mat-icon class="text-orange-600">warning</mat-icon>
+            <span class="font-bold text-gray-900">Cas modéré : Douleurs thoraciques</span>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        
+        <div class="p-6 bg-gradient-to-br from-orange-50 to-white">
+          <div class="bg-red-50 border border-red-200 rounded-xl p-5 mb-6">
+            <div class="flex items-center gap-3">
+              <mat-icon class="text-red-600">emergency</mat-icon>
+              <div>
+                <h4 class="font-bold text-red-700">Alerte modérée détectée</h4>
+                <p class="text-gray-700">Symptômes pouvant indiquer un problème cardiaque ou respiratoire</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white p-5 rounded-xl border border-red-100">
+              <h4 class="font-bold text-red-700 mb-3">Recommandation prioritaire</h4>
+              <p class="text-gray-700 mb-4">Consultez rapidement un professionnel de santé</p>
+              <button mat-stroked-button color="warn" class="w-full">
+                <mat-icon>local_hospital</mat-icon>
+                Trouver un médecin
+              </button>
+            </div>
+            
+            <div class="bg-white p-5 rounded-xl border border-red-100">
+              <h4 class="font-bold text-red-700 mb-3">Mesures immédiates</h4>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-center gap-3">
+                  <mat-icon class="text-red-500">pause_circle</mat-icon>
+                  Éviter tout effort physique
+                </li>
+                <li class="flex items-center gap-3">
+                  <mat-icon class="text-red-500">person</mat-icon>
+                  Appeler un proche si besoin
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </mat-expansion-panel>
+      
+    </div>
+  </div>
+
+</div>

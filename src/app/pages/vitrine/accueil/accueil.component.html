@@ -1,0 +1,58 @@
+<!-- Hero Section améliorée -->
+<div class="pt-24 sm:pt-28 md:pt-32 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto">
+    
+    <div class="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-12 px-4 sm:px-6 lg:px-8">
+      
+      <!-- Contenu texte -->
+      <div class="w-full lg:w-1/2 order-2 lg:order-1">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+          N’dandandé : <span class="text-green-600">L’Assistant IA</span> qui vous accompagne au quotidien
+        </h1>
+        
+        <p class="text-lg sm:text-xl text-green-600 font-semibold mb-4">
+          Pour une meilleure santé
+        </p>
+        
+        <p class="text-gray-700 text-base sm:text-lg mb-6 leading-relaxed">
+          Recevez des conseils médicaux de premier niveau, scannez vos ordonnances, 
+          gérez vos rappels de traitement et bénéficiez d’un suivi des maladies chroniques.  
+          Une solution de santé numérique pensée pour l’Afrique, accessible partout.
+        </p>
+        
+        <!-- Boutons CTA -->
+        <div class="flex flex-col sm:flex-row gap-3 mt-8">
+          <a routerLink="/register" 
+             mat-raised-button 
+             class="!bg-green-600 !text-white hover:!bg-green-700 !px-6 !py-3 !rounded-lg !font-medium">
+            <span>Commencer maintenant</span>
+            <mat-icon class="ml-2 !text-lg">arrow_forward</mat-icon>
+          </a>
+          
+          <a href="#features" 
+             mat-stroked-button 
+             class="!border-gray-300 !text-gray-700 hover:!border-green-500 hover:!text-green-600 !px-6 !py-3 !rounded-lg !font-medium">
+            <span>En savoir plus</span>
+            <mat-icon class="ml-2 !text-lg">info</mat-icon>
+          </a>
+        </div>
+        
+      </div>
+      
+      <!-- Image -->
+      <div class="w-full lg:w-1/2 order-1 lg:order-2">
+        <div class="relative">
+          <img 
+            src="https://media.istockphoto.com/id/1319031310/fr/photo/docteur-%C3%A9crivant-une-prescription-m%C3%A9dicale.jpg?s=612x612&w=0&k=20&c=qzYeQrF2Ns1lmmFMojXp9Simusu9O2G-HoTCZMw1smw=" 
+            alt="Médecin écrivant une prescription médicale"
+            class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl lg:rounded-2xl shadow-xl"
+          >
+          <!-- Overlay décoratif -->
+          <div class="absolute -bottom-3 -right-3 w-24 h-24 bg-green-100 rounded-full -z-10"></div>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+</div>

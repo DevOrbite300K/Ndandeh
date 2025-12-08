@@ -1,0 +1,44 @@
+{
+  "utilisateurs": [
+    {
+      "id": "6b8c",
+      "phone": "661209508",
+      "email": "barry@gmail.com",
+      "password": "123456",
+      "firstName": "Mamadou Djouma",
+      "lastName": "Barry",
+      "birthDate": "2025-12-08T00:00:00.000Z",
+      "address": "Ratoma Nongo Taady"
+    },
+    {
+      "id": "a5e7",
+      "phone": "YUU",
+      "email": "balde@g",
+      "password": "123456balde",
+      "firstName": "O",
+      "lastName": "B",
+      "birthDate": "2025-12-22T00:00:00.000Z",
+      "address": "TY"
+    },
+    {
+      "id": "f1d1",
+      "phone": "YUU",
+      "email": "balde@g",
+      "password": "123456balde",
+      "firstName": "O",
+      "lastName": "B",
+      "birthDate": "2025-12-22T00:00:00.000Z",
+      "address": "TY"
+    },
+    {
+      "id": "1675",
+      "phone": "jsdk",
+      "email": "balde@g",
+      "password": "123456balde",
+      "firstName": "B",
+      "lastName": "Barry",
+      "birthDate": "2025-12-01T00:00:00.000Z",
+      "address": "YU"
+    }
+  ]
+}

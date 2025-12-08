@@ -6,40 +6,71 @@
     <mat-icon class="text-white">menu</mat-icon>
   </button>
   <span class="flex-1"></span>
-  <span class="text-sm text-white font-bold mr-2">Djouma</span>
-  <button mat-icon-button>
+  <button mat-button class="!text-white" [matMenuTriggerFor]="menuNotification">
+    Djouma
+    <mat-icon class="text-white">arrow_drop_down</mat-icon>
+  </button>
+  <button mat-icon-button (click)="sidenavProfile.toggle()">
     <mat-icon class="text-white">person</mat-icon>
   </button>
 </mat-toolbar>
 
+<!-- le menu quand on clic sur le bouton avec dropdown -->
+<mat-menu #menuNotification="matMenu" xPosition="before" class="p-2">
+  <button mat-menu-item>
+    <mat-icon class="mr-2 mb-2">person</mat-icon>
+    Profil
+  </button>
+  <mat-divider></mat-divider>
+
+  <!-- notification plus badge -->
+  <button mat-menu-item>
+    <mat-icon class="mr-2 mb-2">notifications
+    </mat-icon>
+    Notifications
+    <span class="ml-auto bg-red-500 text-white text-xs font-semibold px-2 py-0.5 rounded-full">
+      3
+    </span>
+  </button>
+  <mat-divider></mat-divider>
+
+  <!-- decouvre les fonctionnalité de l'app -->
+  <button mat-menu-item (click)="aide()">
+    <mat-icon class="mr-2 mb-2">help</mat-icon>
+    Aide &amp; Support
+  </button>
+  <mat-divider></mat-divider>
+
+  <button mat-menu-item class="!bg-red-500">
+    <mat-icon class="mr-2">logout</mat-icon>
+    Deconnexion
+  </button>
+</mat-menu>
+
 <!-- HEADER -->
 <div class="p-4 mt-16 flex items-center">
-  <h5 class="text-sm font-semibold text-green-600">Tableau de bord</h5>
-  <span class="flex-1"></span>
-  <span class="px-2 py-1 rounded bg-red-500 text-white text-xs">
-    admin
-  </span>
+  
 </div>
 
 <hr />
 
-<mat-sidenav-container class="h-[calc(100vh-90px)]">
+<mat-sidenav-container class="h-[calc(100vh-90px)] mt-2">
 
   <!-- SIDENAV RESPONSIVE -->
   <mat-sidenav #sidenav 
-               [mode]="screenWidth < 768 ? 'over' : 'side'"
+               [mode]="screenWidth < 768 ? 'over' : 'over'"
                [opened]="screenWidth >= 768"
-               class="bg-white shadow-md w-64">
+               class="bg-white  w-64 h-full !rounded-none">
 
     <mat-nav-list>
       <!-- Item simple avec icône -->
-      <a mat-list-item href="" class="hover:bg-gray-100 rounded">
+      <a mat-list-item class="hover:bg-gray-100 !rounded-none">
         <mat-icon class="mr-3">person</mat-icon>
         Utilisateur
       </a>
 
       <!-- Item accordéon avec sous-menus -->
-      <mat-accordion multi>
+      <mat-accordion multi="false">
         <mat-expansion-panel>
           <mat-expansion-panel-header>
             <mat-panel-title>
@@ -75,78 +106,75 @@
             </a>
           </mat-nav-list>
         </mat-expansion-panel>
+
+        <!-- traitement -->
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="mr-3">healing</mat-icon>
+              Traitement
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <mat-nav-list>
+            <a mat-list-item href="" class="hover:bg-gray-100 rounded">
+              Ajouter Traitement
+            </a>
+            <a mat-list-item href="" class="hover:bg-gray-100 rounded">
+              Liste Traitements
+            </a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+
+
+
+
       </mat-accordion>
 
     </mat-nav-list>
 
   </mat-sidenav>
 
+
+  
+
+  <!-- sidenav pour profile a droite avec des parametres -->
+  <mat-sidenav #sidenavProfile position="end"
+               mode="over"
+               class=" bg-slate-50 shadow-md w-64 !h-[calc(100vh-90px)] p-4 flex flex-col !rounded-none">
+
+        <!-- image centrer -->
+      <div class="flex flex-col items-center mb-4">
+        <img src="assets/img/avatar2.png" alt="Avatar" class="w-24 h-24 rounded-full mb-2">
+        <h2 class="text-md font-semibold">
+          Mamadou Djouma Barry
+        </h2>
+        <p class=" text-sm text-red-500">Admin</p>
+      </div>
+
+      <mat-divider></mat-divider>
+      <span class="flex-1"></span>
+
+
+      <button mat-flat-button class="w-full !text-white !border-2 !border-green-500 !bg-green-600 mt-3 mb-3">
+        Modifier le profil
+        <mat-icon>edit</mat-icon>
+      </button>
+
+      <!-- changer le mot de passe -->
+      <button mat-flat-button class="w-full !text-white !border-2 !border-green-500 !bg-green-600 mb-3">
+        Changer le mot de passe
+        <mat-icon>lock</mat-icon>
+      </button>
+      
+
+      
+      
+  </mat-sidenav>
+
   <!-- MAIN CONTENT -->
-  <mat-sidenav-content class="p-4 sm:p-6 overflow-y-auto">
-
-    <!-- ==== CARDS ==== -->
-    <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 xl:grid-cols-4">
-
-      <mat-card class="shadow-md">
-        <mat-card-title class="p-4 text-lg font-semibold">Card 1</mat-card-title>
-        <mat-card-content class="px-5 pb-4 text-gray-700">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </mat-card-content>
-        <mat-card-footer class="p-4">
-          <button mat-flat-button class="w-full text-white" style="background-color: green;">
-            un bouton
-          </button>
-        </mat-card-footer>
-      </mat-card>
-
-      <mat-card class="shadow-md">
-        <mat-card-title class="p-4 text-lg font-semibold">Card 2</mat-card-title>
-        <mat-card-content class="px-5 pb-4 text-gray-700">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </mat-card-content>
-        <mat-card-footer class="p-4">
-          <button mat-flat-button class="w-full text-white" style="background-color: green;">
-            un bouton
-          </button>
-        </mat-card-footer>
-      </mat-card>
-
-    </div>
-
-    <!-- ==== FORMULAIRE ==== -->
-    <div class="w-full mt-10 mb-10 p-6 bg-white shadow-lg rounded">
-      <form class="flex flex-col gap-5">
-
-        <h3 class="text-lg font-semibold">Ajouter un médicament</h3>
-        <hr />
-
-        <mat-form-field appearance="fill" class="w-full">
-          <mat-label>Désignation</mat-label>
-          <input matInput placeholder="Désignation">
-        </mat-form-field>
-
-        <mat-form-field appearance="fill" class="w-full">
-          <mat-label>Catégorie</mat-label>
-          <mat-select>
-            <mat-option>Paludisme</mat-option>
-            <mat-option>Option 2</mat-option>
-            <mat-option>Option 3</mat-option>
-          </mat-select>
-        </mat-form-field>
-
-        <mat-form-field appearance="fill" class="w-full">
-          <mat-label>Prix</mat-label>
-          <input matInput type="number" placeholder="Prix">
-        </mat-form-field>
-
-        <button mat-raised-button  style="background-color: green;">
-          <span class="text-white">
-            envoyer
-          </span>
-        </button>
-
-      </form>
-    </div>
+  <mat-sidenav-content class="p-4 sm:p-6 overflow-y-auto border-l border-gray-200">
+    <router-outlet></router-outlet>
 
   </mat-sidenav-content>
 

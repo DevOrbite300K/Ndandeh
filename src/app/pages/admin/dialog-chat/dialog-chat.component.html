@@ -1,4 +1,4 @@
-<div class="w-full h-screen flex flex-col bg-gray-100">
+<div class="w-full h-screen flex flex-col bg-gray-100 !rounded-none">
 
   <!-- HEADER -->
   <mat-card class="shadow-md">
@@ -9,35 +9,46 @@
     </mat-card-title>
   </mat-card>
 
-  <!-- CHAT BOX -->
-  <div class="flex-1 p-4 overflow-y-auto">
+  <!-- CHAT -->
+  <div class="flex-1 p-4 overflow-y-auto space-y-3">
 
-    <!-- Message assistant -->
-    <div class="w-full flex justify-start mb-3">
-      <div class="bg-green-500 text-white px-4 py-2 rounded-lg max-w-[75%] shadow">
-        Message 1
-      </div>
-    </div>
+    <ng-container *ngFor="let msg of messages()">
 
-    <!-- Message utilisateur -->
-    <div class="w-full flex justify-end mb-3">
-      <div class="bg-gray-300 text-gray-900 px-4 py-2 rounded-lg max-w-[75%] shadow">
-        Message utilisateur
+      <!-- Message BOT -->
+      <div *ngIf="msg.from === 'bot'" class="w-full flex justify-start">
+        <div class="bg-green-500 text-white px-4 py-2 rounded-lg max-w-[75%] shadow">
+          {{ msg.text }}
+        </div>
       </div>
-    </div>
+
+      <!-- Message USER -->
+      <div *ngIf="msg.from === 'user'" class="w-full flex justify-end">
+        <div class="bg-gray-300 text-gray-900 px-4 py-2 rounded-lg max-w-[75%] shadow">
+          {{ msg.text }}
+        </div>
+      </div>
+
+    </ng-container>
 
   </div>
 
-  <!-- INPUT AREA -->
+  <!-- INPUT -->
   <div class="w-full p-3 bg-white shadow-md">
     <div class="flex items-center gap-3">
 
       <mat-form-field class="flex-1" appearance="fill">
         <mat-label>Message</mat-label>
-        <input matInput placeholder="Écrire un message...">
+        <input 
+          matInput
+          placeholder="Écrire un message..."
+          [ngModel]="currentMessage()"
+          (ngModelChange)="currentMessage.set($event)"
+          (keyup.enter)="sendMessage()"
+        />
+
       </mat-form-field>
 
-      <button mat-fab color="primary">
+      <button mat-fab color="primary" (click)="sendMessage()">
         <mat-icon>send</mat-icon>
       </button>
 

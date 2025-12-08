@@ -1,30 +1,28 @@
-import { Component, HostListener, inject } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { MaterialModule } from '../../utils/material';
 import { CommonModule } from '@angular/common';
+import { RouterLink, RouterModule } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
-import { DialogChatComponent } from './dialog-chat/dialog-chat.component';
-import { Router, RouterOutlet } from '@angular/router';
+import { DialogChatComponent } from '../admin/dialog-chat/dialog-chat.component';
 
 @Component({
-    selector: 'app-admin',
-    imports: [MaterialModule, CommonModule, RouterOutlet],
-    templateUrl: './admin.component.html',
-    styleUrl: './admin.component.scss',
-    standalone: true
+  selector: 'app-vitrine',
+  imports: [MaterialModule, CommonModule, RouterModule, RouterLink],
+  templateUrl: './vitrine.component.html',
+  styleUrl: './vitrine.component.scss'
 })
-export class AdminComponent {
+export class VitrineComponent {
 
   screenWidth = window.innerWidth;
 
-  constructor(private dialog: MatDialog) {}
+  constructor(private matdialog: MatDialog) {}
 
-  // 🔥 Met à jour la largeur quand l'utilisateur resize l'écran
+  // 🔥 Mise à jour auto de la largeur de l'écran
   @HostListener('window:resize')
   onResize() {
     this.screenWidth = window.innerWidth;
   }
 
-  // 🔥 Ouvre le chat de manière responsive
   ouvrirChat() {
 
     let dialogWidth = "400px";
@@ -46,23 +44,15 @@ export class AdminComponent {
       dialogHeight = "70vh";
 
     } else {
-      // 🖥️ GRAND ÉCRAN
-      dialogWidth = "30vw";
-      dialogHeight = "60vh";
+      // 🖥️ GRAND ÉCRAN —> Tu veux 60% largeur & 70% hauteur
+      dialogWidth = "60vw";   // <<<<<<<<<<<<<<<< ajouté
+      dialogHeight = "70vh";  // <<<<<<<<<<<<<<<< ajouté
     }
 
-    this.dialog.open(DialogChatComponent, {
+    this.matdialog.open(DialogChatComponent, {
       width: dialogWidth,
       height: dialogHeight
     });
-
-  }
-
-  route=inject(Router)
-
-  aide(){
-
-    this.route.navigate(["/admin/aide"]);
 
   }
 
