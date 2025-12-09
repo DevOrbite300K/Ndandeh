@@ -1,81 +1,77 @@
-<div class="w-full min-h-screen flex items-center justify-center bg-gray-100">
+<div class="w-full min-h-screen flex items-center justify-center bg-gray-100 p-4">
 
-    <!-- CONTENEUR 2 COLONNES -->
-    <div class="w-11/12 md:w-10/12 lg:w-9/12 bg-white shadow-2xl rounded-2xl overflow-hidden flex flex-col md:flex-row">
+  <!-- CONTENEUR 2 COLONNES -->
+  <div class="w-full max-w-4xl bg-white shadow-2xl rounded-2xl overflow-hidden flex flex-col md:flex-row">
 
-        <!-- ========================= -->
-        <!--        IMAGE GAUCHE       -->
-        <!-- ========================= -->
-        <div class="w-full md:w-6/12 h-64 md:h-auto bg-slate-200 flex items-center justify-center">
-            <img 
-                src="assets/img/image.jpg"
-                alt="connexion nDandeh"
-                class="w-full h-10/12  "
-            >
-        </div>
+    <!-- ========================= -->
+    <!--        IMAGE GAUCHE       -->
+    <!-- ========================= -->
+    <div class="w-full md:w-6/12 h-64 md:h-auto bg-slate-200 flex items-center justify-center">
+      <img 
+        src="assets/img/image.jpg"
+        alt="connexion nDandeh"
+        class="object-contain w-full h-full"
+      >
+    </div>
 
-        <!-- ========================= -->
-        <!--     FORMULAIRE DROITE     -->
-        <!-- ========================= -->
-        <div class="w-full md:w-6/12 p-10 flex flex-col justify-center">
+    <!-- ========================= -->
+    <!--     FORMULAIRE DROITE     -->
+    <!-- ========================= -->
+    <div class="w-full md:w-6/12 p-6 sm:p-10 flex flex-col justify-center">
 
-            <h2 class="text-md flex flex-row justify-between font-bold text-green-700 mb-6 text-center">
-                <span>Connexion Ndandeh</span>
-                <a routerLink="" class="text-green-700 font-medium hover:underline">
-                        <mat-icon>home</mat-icon>
-                </a>
-            </h2>
+      <h2 class="flex flex-col sm:flex-row justify-between font-bold text-green-700 mb-6 text-center sm:text-left gap-2">
+        <span class="text-xl sm:text-2xl">Connexion Ndandeh</span>
+        <a routerLink="" class="text-green-700 font-medium hover:underline">
+          <mat-icon>home</mat-icon>
+        </a>
+      </h2>
 
-            <mat-divider class="my-2"></mat-divider>
-            
-            <span class="text-gray-600 mb-8 text-sm text-center">
-                Connectez-vous à votre compte pour continuer sur Ndandeh
-                <mat-icon>info</mat-icon>
-            </span>
+      <mat-divider class="my-2"></mat-divider>
+      
+      <span class="text-gray-600 mb-6 text-sm text-center sm:text-left flex items-center justify-center sm:justify-start gap-1">
+        Connectez-vous à votre compte pour continuer sur Ndandeh
+        <mat-icon>info</mat-icon>
+      </span>
 
-            <form class="flex flex-col gap-6">
+      <form class="flex flex-col gap-4 sm:gap-6">
 
-                <!-- EMAIL -->
-                <mat-form-field appearance="fill" class="w-full">
-                    <mat-label>Email</mat-label>
-                    <mat-icon matPrefix>mail</mat-icon>
-                    <input type="email" matInput placeholder="Votre email">
-                </mat-form-field>
+        <!-- EMAIL -->
+        <mat-form-field appearance="fill" class="w-full">
+          <mat-label>Email</mat-label>
+          <mat-icon matPrefix>mail</mat-icon>
+          <input type="email" matInput placeholder="Votre email">
+        </mat-form-field>
 
-                <!-- MDP -->
-                <mat-form-field appearance="fill" class="w-full">
-                    <mat-label>Mot de passe</mat-label>
-                    <mat-icon matPrefix>lock</mat-icon>
-                    <input type="password" matInput placeholder="Votre mot de passe">
-                </mat-form-field>
+        <!-- MDP -->
+        <mat-form-field appearance="fill" class="w-full">
+          <mat-label>Mot de passe</mat-label>
+          <mat-icon matPrefix>lock</mat-icon>
+          <input type="password" matInput placeholder="Votre mot de passe">
+        </mat-form-field>
 
-                <!-- BOUTON -->
-                <button 
-                    mat-raised-button
-                    class="!bg-green-600 !text-white py-3 text-lg rounded-lg shadow-lg hover:shadow-xl transition">
-                    Se connecter
-                </button>
+        <!-- BOUTON -->
+        <button 
+          mat-raised-button
+          class="!bg-green-600 !text-white py-3 text-lg rounded-lg shadow-lg hover:shadow-xl transition w-full sm:w-auto">
+          Se connecter
+        </button>
 
-            </form>
+      </form>
 
-            <!-- ========================= -->
-            <!--     LIENS SUPPLÉMENTAIRES -->
-            <!-- ========================= -->
-            <div class="mt-6 flex flex-col items-center space-y-2 text-sm">
-
-                <a href="#" class="text-green-700 font-medium hover:underline">
-                    Mot de passe oublié ?
-                </a>
-
-                <a routerLink="/auth/register" class="text-gray-700 hover:underline">
-                    Pas inscrit ? <span class="text-green-600 font-semibold">Créer un compte</span>
-                </a>
-            </div>
-
-            
-                
-        </div>
+      <!-- ========================= -->
+      <!--     LIENS SUPPLÉMENTAIRES -->
+      <!-- ========================= -->
+      <div class="mt-6 flex flex-col items-center sm:items-start space-y-2 text-sm">
+        <a href="#" class="text-green-700 font-medium hover:underline">
+          Mot de passe oublié ?
+        </a>
+        <a routerLink="/auth/register" class="text-gray-700 hover:underline">
+          Pas inscrit ? <span class="text-green-600 font-semibold">Créer un compte</span>
+        </a>
+      </div>
 
     </div>
+
+  </div>
 
 </div>
