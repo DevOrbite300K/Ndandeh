@@ -23,12 +23,9 @@ export class LoginComponent {
     password:['', Validators.required]
   });
 
-  onLogin(){
-    const {email, password}=this.loginForm.value;
-    this.authservice.login(email as string , password as string).subscribe({
-      next: user => console.log(user),
-      error: err => console.log(err)
-    });
-  }
+  isloading=false;
+  onLogin() {
+      }
+
 
 }
