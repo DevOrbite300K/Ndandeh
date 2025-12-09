@@ -48,7 +48,7 @@
 <div class="fixed bottom-0 left-0 right-0 z-50 bg-slate-300 backdrop-blur-sm border-t border-gray-200 shadow-sm">
 
 
-  <div class="fixed bottom-10 right-4 z-50">
+  <div class="fixed bottom-20 right-4 z-50">
     <button (click)="ouvrirChat()" class="flex items-center justify-center w-12 h-12 bg-green-600 text-white rounded-full shadow-lg hover:bg-green-700 transition-colors duration-200">
       <mat-icon>chat</mat-icon>
     </button>
@@ -66,30 +66,35 @@
       <span class="hidden sm:inline text-gray-300">|</span>
       
       <!-- Liens de navigation -->
-      <nav class="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
-        <a routerLink="savoirplus/" 
-           class="text-green-600 hover:text-green-700 hover:underline text-xs sm:text-sm transition-colors duration-200">
-          Savoir plus
-        </a>
-        <span class="text-gray-300">•</span>
-        
-        <a routerLink="contact/" 
-           class="text-green-600 hover:text-green-700 hover:underline text-xs sm:text-sm transition-colors duration-200">
-          Contact
-        </a>
-        <span class="text-gray-300">•</span>
-        
-        <a routerLink="fonctionnalite/" 
-           class="text-green-600 hover:text-green-700 hover:underline text-xs sm:text-sm transition-colors duration-200">
-          Fonctionnalités
-        </a>
-        <span class="text-gray-300">•</span>
-        
-        <a href="#" 
-           class="text-gray-500 hover:text-green-600 hover:underline text-xs sm:text-sm transition-colors duration-200">
-          Confidentialité
-        </a>
-      </nav>
+      <!-- Barre de navigation style mobile app -->
+        <nav class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 shadow-md flex justify-around items-center py-2 sm:py-3 z-50">
+          
+          <!-- Savoir plus -->
+          <a routerLink="savoirplus/" class="flex flex-col items-center text-green-600 hover:text-green-700 transition-colors duration-200">
+            <mat-icon class="text-2xl sm:text-3xl">health_and_safety</mat-icon>
+            <span class="text-xs sm:text-sm mt-1">Savoir plus</span>
+          </a>
+
+          <!-- Contact -->
+          <a routerLink="contact/" class="flex flex-col items-center text-green-600 hover:text-green-700 transition-colors duration-200">
+            <mat-icon class="text-2xl sm:text-3xl">contact_support</mat-icon>
+            <span class="text-xs sm:text-sm mt-1">Contact</span>
+          </a>
+
+          <!-- Fonctionnalités -->
+          <a routerLink="fonctionnalite/" class="flex flex-col items-center text-green-600 hover:text-green-700 transition-colors duration-200">
+            <mat-icon class="text-2xl sm:text-3xl">widgets</mat-icon>
+            <span class="text-xs sm:text-sm mt-1">Fonctionnalités</span>
+          </a>
+
+          <!-- Confidentialité -->
+          <a href="#" class="flex flex-col items-center text-gray-400 hover:text-green-600 transition-colors duration-200">
+            <mat-icon class="text-2xl sm:text-3xl">privacy_tip</mat-icon>
+            <span class="text-xs sm:text-sm mt-1">Confidentialité</span>
+          </a>
+
+        </nav>
+
       
     </div>
   </mat-toolbar>
