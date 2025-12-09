@@ -96,8 +96,11 @@
 
             <div class="flex flex-col sm:flex-row justify-between gap-2 mt-2 sm:mt-4">
               <button mat-stroked-button color="warn" (click)="stepper.previous()" class="w-full sm:w-auto">Précédent</button>
-              <button mat-raised-button color="primary" (click)="inscription()" [disabled]="profileFormGroup.invalid" class="w-full sm:w-auto">
-                S'inscrire
+              <button mat-raised-button color="primary" 
+                        (click)="inscription()" 
+                        [disabled]="isSubmitting || profileFormGroup.invalid"
+                        class="w-full sm:w-auto">
+                  S'inscrire
               </button>
             </div>
           </form>

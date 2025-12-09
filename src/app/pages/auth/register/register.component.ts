@@ -49,18 +49,25 @@ export class RegisterComponent implements OnInit {
   }
 
   message:string="";
-  inscription(){
-      const user = {
-        ...this.accountFormGroup.value,
-        ...this.profileFormGroup.value
-      };
-      this.authservice.register(user).subscribe(response => {
-        this.message = "Inscription réussie!";
-        console.log('Inscription réussie:', response);
-      }, error => {
-        this.message = "Erreur lors de l'inscription.";
-        console.error('Erreur lors de l\'inscription:', error);
-      });
-  }
+  isSubmitting = false;
+
+    inscription() {
+        if (this.accountFormGroup.invalid || this.profileFormGroup.invalid) return;
+
+        this.isSubmitting = true;
+        const user = { ...this.accountFormGroup.value, ...this.profileFormGroup.value };
+
+        this.authservice.register(user).subscribe({
+          next: response => {
+            this.message = "Inscription réussie!";
+            this.isSubmitting = false;
+          },
+          error: err => {
+            this.message = "Erreur lors de l'inscription.";
+            this.isSubmitting = false;
+          }
+        });
+    }
+
 
 }
