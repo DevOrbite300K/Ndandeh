@@ -1,5 +1,5 @@
 <!-- Navigation améliorée -->
-<div class="w-full py-3 fixed top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
+<div class="w-full py-3 fixed top-0 z-50 bg-slate-300 backdrop-blur-sm border-b border-gray-100">
 
   <!-- bouton chat flottant en bas et fixe a droite -->
   
@@ -20,12 +20,12 @@
     <div class="flex items-center gap-2">
       <a routerLink="/auth" 
          mat-button 
-         class=" !text-green-600  bg-slate-50 hover:!shadow-md  duration-200 !rounded-lg !px-4 !py-1">
+         class=" !bg-slate-50 !text-green-600 hover:!bg-slate-50 hover:!shadow-md transition-shadow duration-200 !rounded-lg !px-4 !py-1">
         <span class="hidden sm:inline">Se connecter</span>
         <mat-icon class="sm:hidden !text-lg">login</mat-icon>
       </a>
       
-      <a routerLink="/register" 
+      <a routerLink="/auth/register" 
          mat-button 
          class="!bg-slate-50 !text-green-600 hover:!bg-slate-50 hover:!shadow-md transition-shadow duration-200 !rounded-lg !px-4 !py-1">
         <span class="hidden sm:inline">S'inscrire</span>

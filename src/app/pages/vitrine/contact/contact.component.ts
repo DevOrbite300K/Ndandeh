@@ -12,4 +12,5 @@ import { RouterModule } from '@angular/router';
 })
 export class ContactComponent {
 
+  email: string = 'bdjouma37@gmail.com';
 }
