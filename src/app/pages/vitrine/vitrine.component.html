@@ -13,6 +13,28 @@
     
     <!-- Espace central -->
     <span class="flex-1"></span>
+
+
+    
+
+    <!-- bouton icone help -->
+    <button mat-icon-button [matMenuTriggerFor]="menuAide"  class="hidden sm:inline-flex">
+      <mat-icon class="text-green-600">person</mat-icon>
+    </button>
+
+
+    <!-- le matmenu de l'icon person contenant les bouton se connecter et s'inscrire   -->
+    <mat-menu #menuAide="matMenu" xPosition="before" class="p-2">
+      <a routerLink="/auth" mat-menu-item>
+        <mat-icon class="mr-2 mb-2">login</mat-icon>
+        Se connecter
+      </a>
+      <mat-divider></mat-divider>
+      <a routerLink="/auth/register" mat-menu-item>
+        <mat-icon class="mr-2 mb-2">person_add</mat-icon>
+        S'inscrire
+      </a>
+    </mat-menu>
     
     
     
