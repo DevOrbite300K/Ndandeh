@@ -61,16 +61,24 @@
                [opened]="screenWidth >= 768"
                class="bg-white  w-64 h-full !rounded-none">
 
+    <mat-toolbar class="bg-green-600 text-white">
+      <span class="flex-1  text-xl font-bold">Ndandandeh</span>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon class="text-green-500">close</mat-icon>
+      </button>
+    </mat-toolbar>
+
     <mat-nav-list>
 
-      <span class="text-gray-500 text-sm font-semibold mb-2">Ndandandeh</span>
+      <!-- Item simple avec icône -->
+      <a mat-list-item class="hover:bg-gray-100 !rounded-none mb-2">
+        <mat-icon class="mr-3">dashboard</mat-icon>
+        Dashboard
+      </a>
       <mat-divider class="mb-2"></mat-divider>
 
       <!-- Item simple avec icône -->
-      <a mat-list-item class="hover:bg-gray-100 !rounded-none">
-        <mat-icon class="mr-3">person</mat-icon>
-        Utilisateur
-      </a>
+     
 
       <!-- Item accordéon avec sous-menus -->
       <mat-accordion multi="false">
