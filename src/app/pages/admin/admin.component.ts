@@ -3,11 +3,11 @@ import { MaterialModule } from '../../utils/material';
 import { CommonModule } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogChatComponent } from './dialog-chat/dialog-chat.component';
-import { Router, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
     selector: 'app-admin',
-    imports: [MaterialModule, CommonModule, RouterOutlet],
+    imports: [MaterialModule, CommonModule, RouterOutlet, RouterLink],
     templateUrl: './admin.component.html',
     styleUrl: './admin.component.scss',
     standalone: true

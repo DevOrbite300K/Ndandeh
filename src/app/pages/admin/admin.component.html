@@ -85,17 +85,17 @@
         <mat-expansion-panel>
           <mat-expansion-panel-header>
             <mat-panel-title>
-              <mat-icon class="mr-3">medication</mat-icon>
-              Médicament
+              <mat-icon class="mr-3">healing</mat-icon>
+              Analyse IA
             </mat-panel-title>
           </mat-expansion-panel-header>
 
           <mat-nav-list>
             <a mat-list-item href="" class="hover:bg-gray-100 rounded">
-              Ajouter Médicament
+              Ajouter Analyse IA
             </a>
             <a mat-list-item href="" class="hover:bg-gray-100 rounded">
-              Liste Médicaments
+              Liste Analyse IA
             </a>
           </mat-nav-list>
         </mat-expansion-panel>
@@ -103,17 +103,19 @@
         <mat-expansion-panel>
           <mat-expansion-panel-header>
             <mat-panel-title>
-              <mat-icon class="mr-3">category</mat-icon>
-              Catégorie
+              <mat-icon class="mr-3">
+                scanner
+              </mat-icon>
+              Scanner Ordonnance
             </mat-panel-title>
           </mat-expansion-panel-header>
 
           <mat-nav-list>
             <a mat-list-item href="" class="hover:bg-gray-100 rounded">
-              Ajouter Catégorie
+              Effectuer un Scannage
             </a>
             <a mat-list-item href="" class="hover:bg-gray-100 rounded">
-              Liste Catégories
+              Mes Scanners Ordonnances
             </a>
           </mat-nav-list>
         </mat-expansion-panel>
@@ -122,17 +124,19 @@
         <mat-expansion-panel>
           <mat-expansion-panel-header>
             <mat-panel-title>
-              <mat-icon class="mr-3">healing</mat-icon>
-              Traitement
+              <mat-icon class="mr-3">
+                medication
+              </mat-icon>
+              Suivie des maladies
             </mat-panel-title>
           </mat-expansion-panel-header>
 
           <mat-nav-list>
             <a mat-list-item href="" class="hover:bg-gray-100 rounded">
-              Ajouter Traitement
+              Ajouter Suivie des maladies
             </a>
             <a mat-list-item href="" class="hover:bg-gray-100 rounded">
-              Liste Traitements
+              Liste Suivie des maladies
             </a>
           </mat-nav-list>
         </mat-expansion-panel>
@@ -198,5 +202,16 @@
           class="text-white shadow-2xl"
           style="background-color: green;">
     <mat-icon>chat</mat-icon>
+  </button>
+</div>
+
+
+<!-- bouton Home fixe en haut de chat pour aller a l'acceuil  -->
+<div style="position: fixed; bottom: 6.5rem; right: 1.5rem; z-index: 9999;">
+  <button mat-fab
+          routerLink=""
+          class="text-white shadow-2xl"
+          style="background-color: green;">
+    <mat-icon>home</mat-icon>
   </button>
 </div>
